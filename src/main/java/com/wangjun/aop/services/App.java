@@ -33,7 +33,7 @@ public class App {
 		*/
 		
 		//如何对指定的方法进行拦截
-		CustomerService service3 = (CustomerService) context.getBean("customerServiceProxy2");
+		CustomerService service3 = context.getBean("customerServiceProxy2",CustomerService.class);
 		System.out.println("使用AOP对指定method进行拦截...");
 		service3.printName();
 		service3.printUrl();
