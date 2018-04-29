@@ -9,6 +9,8 @@
 	<configs>
 		<config>src/main/resources/customerBean.xml</config>
 		<config>src/main/resources/IoCCrazyjava.xml</config>
+		<config>src/main/resources/aopAspectJ.xml</config>
+		<config>src/main/resources/aopXml.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

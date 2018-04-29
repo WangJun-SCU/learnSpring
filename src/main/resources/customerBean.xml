@@ -8,6 +8,7 @@
 		<property name="url" value="www.scuwangjun.com"></property>
 	</bean>
 
+	<!-- 比较老的配置AOP的方式，现在一般使用aop命名空间下的配置 -->
 	<bean id="aopMethodBefore" class="com.wangjun.aop.services.AopMethodBefore"></bean>
 	<bean id="aopMethodAfter" class="com.wangjun.aop.services.AopMethodAfter"></bean>
 	<bean id="aopMethodException" class="com.wangjun.aop.services.AopMethodException"></bean>
