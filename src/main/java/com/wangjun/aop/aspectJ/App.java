@@ -1,11 +1,13 @@
 package com.wangjun.aop.aspectJ;
 
-public class App {
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {	
 	public static void main(String[] args) {
-		Hello hello = new Hello();
-		hello.foo();
-		hello.addUser("wangjun", "pass");
-		World world = new World();
-		world.bar();
+		ApplicationContext context = new ClassPathXmlApplicationContext("aopAspectJ.xml");
+		TestBean at = context.getBean("test", TestBean.class);
+		at.test();
 	}
+
 }
