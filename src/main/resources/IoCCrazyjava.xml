@@ -3,13 +3,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+	<bean class="com.wangjun.ioc.crzayjava.BeanPostProcessorImpl"></bean>
+
+	<bean id="stoneAxe" class="com.wangjun.ioc.crzayjava.StoneAxe"></bean>
 	<!-- 设值注入 -->
-	<bean id="chinese" class="com.wangjun.ioc.crzayjava.Chinese">
+	<bean id="chinese" class="com.wangjun.ioc.crzayjava.Chinese" init-method="init" destroy-method="myDestroy">
 		<property name="axe" ref="stoneAxe"></property>
 	</bean>
-	
-	<bean id="stoneAxe" class="com.wangjun.ioc.crzayjava.StoneAxe"></bean>
-	
+
 	<!-- 构造注入 -->
 	<bean id="american" class="com.wangjun.ioc.crzayjava.American">
 		<constructor-arg ref="stoneAxe"></constructor-arg>

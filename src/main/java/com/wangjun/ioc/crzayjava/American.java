@@ -11,7 +11,7 @@ public class American implements Person {
 
 	@Override
 	public void useAxe() {
-		System.out.println(axe.chop());
+		System.out.println("American" + axe.chop());
 	}
 
 }
