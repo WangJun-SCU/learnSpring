@@ -11,7 +11,7 @@ public class MyBatisUtil
 {
 	private final static SqlSessionFactory sqlSessionFactory;
 	static {
-		String resource = "mybatis/configuration.xml";
+		String resource = "mybatis/mybaits-config.xml";
 		Reader reader = null;
 		try {
 			reader = Resources.getResourceAsReader(resource);

@@ -6,9 +6,9 @@
 	<!-- 需要maven依赖commons-dbcp包 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
-		<property name="url" value="jdbc:mysql://localhost/test?useSSL=false"></property>
+		<property name="url" value="jdbc:mysql://localhost/test?serverTimezone=GMT"></property>
 		<property name="username" value="root"></property>
-		<property name="password" value="1263wang63"></property>
+		<property name="password" value="1263wang"></property>
 		<property name="maxIdle" value="30"></property>
 		<property name="defaultAutoCommit" value="true"></property>
 	</bean>
