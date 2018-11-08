@@ -10,5 +10,3 @@
     <mapper resource="mybatis/UserMapper.xml"/>
   </mappers>
 </configuration>
-
-第3次提交
