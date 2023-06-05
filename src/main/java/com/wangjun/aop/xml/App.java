@@ -8,7 +8,8 @@ public class App {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("aopXml.xml");
 		Hello hello = context.getBean("hello", Hello.class);
-		hello.foo("strstr");
+		hello.foo("fooInput");
+
 	}
 
 }

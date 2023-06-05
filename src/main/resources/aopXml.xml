@@ -9,19 +9,21 @@
 
 	<aop:config>
 		<!-- order:指定切面bean的优先级，值越小，优先级越高 -->
-		<aop:aspect id="fourAdviceAspect" ref="fourAdviceBean" order="2">
+		<aop:aspect id="firstAdviceAspect" ref="firstAdviceBean" order="2">
 			<!-- 定义一个只在当前切面有效的切入点，如果放在aop:config标签下，那么全局有效 -->
 			<aop:pointcut expression="execution(* com.wangjun.aop.xml.*.*(..))" id="mypointcut"/>
-			<aop:around method="processTask" pointcut-ref="mypointcut"/>
-			<aop:before method="authority" pointcut-ref="mypointcut"/>
-			<aop:after-returning method="log" returning="rvt" pointcut-ref="mypointcut"/>
+			<aop:before method="before" pointcut-ref="mypointcut"/>
+			<aop:around method="around" pointcut-ref="mypointcut"/>
+			<aop:after-returning method="afterReturning" returning="rvt" pointcut-ref="mypointcut"/>
 		</aop:aspect>
+
 		<aop:aspect id="secondAdviceAspect" ref="secondAdviceBean" order="1">
 			<aop:before method="authority" pointcut="execution(* com.wangjun.aop.xml.*.*(..)) and args(aa)"/>
 		</aop:aspect>
+
 	</aop:config>
 	
-	<bean id="fourAdviceBean" class="com.wangjun.aop.xml.FourAdviceTest"></bean>
+	<bean id="firstAdviceBean" class="com.wangjun.aop.xml.FirstAdviceTest"></bean>
 	<bean id="secondAdviceBean" class="com.wangjun.aop.xml.SecondAdviceTest"></bean>
 	<bean id="hello" class="com.wangjun.aop.xml.Hello"></bean>
 	<bean id="world" class="com.wangjun.aop.xml.World"></bean>
