@@ -10,6 +10,11 @@ public class App {
 		Hello hello = context.getBean("hello", Hello.class);
 		hello.foo("fooInput");
 
+
+//		World world = context.getBean("world", World.class);
+//		world.bar();
+
+
 	}
 
 }
