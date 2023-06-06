@@ -17,7 +17,7 @@ public class ThirdAdviceTest implements MethodInterceptor  {
         // 方法名
         String methodName = invocation.getMethod().getName();
 
-        System.out.println("[执行]ThirdAdviceTest.invoke 目标类名.方法名:" + serviceName + "." + methodName);
+        System.out.println("ThirdAdviceTest.invoke 目标类名.方法名:" + serviceName + "." + methodName);
 
         return invocation.proceed();
     }
